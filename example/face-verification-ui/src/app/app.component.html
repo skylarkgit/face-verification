@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Face Verification Demo</h1>
+
+  <div class="row">
+
+    <div class="col-12">
+      <div class="row">
+        <!-- Cam View -->
+        <div class="col-sm-12 col-md-8">
+          <webcam [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+            *ngIf="showWebcam" [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable"
+            [videoOptions]="videoOptions" [imageQuality]="1" (cameraSwitched)="cameraWasSwitched($event)"
+            (initError)="handleInitError($event)"></webcam>
+        </div>
+
+        <!-- Source File -->
+        <div class="col-sm-12 col-md-4">
+          <div class="row">
+            <div class="col-12">Choose the Source file here</div>
+            <div class="col-12">
+              <input type="file" #file [(ngModel)]="source" (change)="onFilesAdded($event.target.files)" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div *ngIf="loading || (lastResult != null)" class="col-12 text-center">
+      <div *ngIf="loading">
+        <p> Loading... </p>
+      </div>
+      <span *ngIf="(lastResult!=null) && !loading">{{lastResult}}</span>
+    </div>
+
+    <!-- Submit for verification -->
+    <div class="col-12 text-center">
+      <button class="actionBtn" (click)="triggerSnapshot();" [disabled]="(!sourceFile) || loading">Verify</button>
+    </div>
+  </div>
+</div>

@@ -8,12 +8,15 @@ import facenet.src.facenet as facenet
 from keras.models import load_model
 import os
 import tensorflow as tf
+from flask_cors import CORS, cross_origin
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 
 app = Flask(__name__)
 api = Api(app)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 model = load_model('facenet_keras.h5')
 model._make_predict_function()

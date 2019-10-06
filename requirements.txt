@@ -4,14 +4,19 @@
 _libgcc_mutex=0.1=main
 _tflow_select=2.3.0=mkl
 absl-py=0.8.0=py37_0
+aniso8601=8.0.0=pypi_0
 astor=0.8.0=py37_0
 blas=1.0=mkl
 c-ares=1.15.0=h7b6447c_1001
 ca-certificates=2019.8.28=0
 certifi=2019.9.11=py37_0
 chardet=3.0.4=pypi_0
+click=7.0=pypi_0
 cycler=0.10.0=pypi_0
 facenet=1.0.5=pypi_0
+flask=1.1.1=pypi_0
+flask-cors=3.0.8=pypi_0
+flask-restful=0.3.7=pypi_0
 gast=0.3.2=py_0
 google-pasta=0.1.7=py_0
 grpcio=1.16.1=py37hf8bcb03_1
@@ -19,8 +24,10 @@ h5py=2.9.0=py37h7918eee_0
 hdf5=1.10.4=hb1b8bf9_0
 idna=2.8=pypi_0
 intel-openmp=2019.4=243
+itsdangerous=1.1.0=pypi_0
+jinja2=2.10.3=pypi_0
 joblib=0.14.0=pypi_0
-keras=2.3.0=pypi_0
+keras=2.2.5=pypi_0
 keras-applications=1.0.8=py_0
 keras-preprocessing=1.1.0=py_1
 kiwisolver=1.1.0=pypi_0
@@ -31,6 +38,7 @@ libgfortran-ng=7.3.0=hdf63c60_0
 libprotobuf=3.9.2=hd408876_0
 libstdcxx-ng=9.1.0=hdf63c60_0
 markdown=3.1.1=py37_0
+markupsafe=1.1.1=pypi_0
 matplotlib=3.1.1=pypi_0
 mkl=2019.4=243
 mkl-service=2.3.0=py37he904b0f_0
@@ -49,6 +57,7 @@ psutil=5.6.3=pypi_0
 pyparsing=2.4.2=pypi_0
 python=3.7.4=h265db76_1
 python-dateutil=2.8.0=pypi_0
+pytz=2019.2=pypi_0
 pyyaml=5.1.2=pypi_0
 readline=7.0=h7b6447c_5
 requests=2.22.0=pypi_0
